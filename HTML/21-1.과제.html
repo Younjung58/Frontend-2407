@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원 가입</title>
+    <style>
+        td {border-style: outset;}
+    </style>
+</head>
+<body style="margin: 4px;">
+    <h style="font-size: 30px; font-style: bold; background-color: yellow; color: blue;">
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 👱회원가입👱 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  </h>
+           <br><br>
+    <form action="#" method="get" class="pure-form">
+        <fieldset>
+        <table>
+        <tbody>
+            <tr>
+                <td><label for="id">사용자 ID(*)</label></td>
+                <td><input type="text" name="id" id="id" required></td>
+            </tr>
+            <tr>
+                <td><label for="pwd">패스워드(*)</label></td>
+                <td><input type="password" placeholder="password" id="pwd" required></td>
+            </tr>
+            <tr>
+                <td><label for="cpwd">패스워드 확인(*)</label></td>
+                <td><input type="password" placeholder="Confirm Password" id="cpwd" required></td>
+            </tr>
+        
+            <tr>
+                <td><label for="name">이름(*)</label></td>
+                <td><input type="text" name="name" id="name" required></td>
+            </tr>
+            <tr>
+                <td>성별(*)</td>
+                <td><input type="radio" id="남" name="성별" value="남자" required>
+                    <label for="남">남</label>
+                    <input type="radio" id="여" name="성별" value="여자" required>
+                    <label for="여">여</label></td>
+            </tr>
+            <tr>
+                <td><label for="email">이메일(*)</label></td>
+                <td><input type="email" id="email" required></td>
+            </tr>
+            <tr>
+                <td><label for="tel">전화번호</label></td>
+                <td><input type="tel" id="tel"></td>
+            </tr>  
+        </tbody>
+
+        <table>
+            <tr>
+                <td><label for="intro">&nbsp;&nbsp;&nbsp;&nbsp;
+                    자기소개&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></td>
+                <td><textarea name="intro" id="intro" rows="10" cols="40"></textarea></td>
+            </tr>
+        </table>
+        <br><br>
+        <table>
+            <tr>
+                <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                <th><button type="submit" class="pure-button pure-button-primary">제출</button>
+                    &nbsp;&nbsp;&nbsp;<input type="reset" value="취소"></th>
+            </tr>
+        </fieldset>
+    </form>
+</body>
+</html>
