@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 링크</title>
+    <style>
+        a:link {color: hotpink;}
+        a:visited {color: purple;}
+        a:hover {color: blue;}
+        a:active {color: white;}
+        div > a:link, div > a:visited{ 
+            background-image: url('../HTML/img/버튼.png'); opacity: 0.5; border-radius: 40%; border-style: outset;
+            color: black;
+            font-size: 25px;
+            font-style: italic;
+            padding: 100px 100px;
+            text-align: center;
+            display: inline-block;
+            margin: 40px;
+            text-decoration: none;
+        }
+        div > a:hover, div > a:active { 
+            opacity: 0.7;
+        }
+    </style> 
+</head>
+<body style="margin: 40px;">
+    <a href="https://www.google.com/?hl=ko" target="blank">여기 링크를 누르세요</a>
+    <br>
+    <div>
+        <a href="https://www.google.com/?hl=ko" target="blank">눌러보시오</a>
+    </div>
+</body>
+</html>
