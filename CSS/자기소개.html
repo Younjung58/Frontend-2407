@@ -20,7 +20,13 @@
         .column {float: left; width: 33.33%; padding: 15px; }
 
         .back { padding: 20px; background-color: white; margin-top: 20px;}
-        
+
+        div.header  h1 { text-shadow: 3px 3px black;}
+
+        ul.b {list-style-type: square;}
+
+        ul.b > div {background-image: url(../HTML/img/운동배경.jpg);
+                    background-size: 100% 100%;}
         /* Clear floats after the columns */
         .row::after {content: "";display: table;clear: both;}
         
@@ -34,31 +40,34 @@
 </head>
 <body style="background-color: #adadad;">
 <div class="header">
-    <h1> 나의 소개 </h1>
-    <div style="background-color: black; color: white; position: sticky; width: 60%; 
+    <h1 style="color: #adadad;"> "About Me" </h1>
+    <div style="background-color: rgb(0, 0, 0); color: white; position: sticky; width: 60%; 
           margin: auto; border-radius: 30%;">
         <p>"안녕하세요. 제 이름은 <b>박연정</b>입니다."</p>
     </div>
 </div>
 <div class="topnav">
-    <a href="#">태어난 곳</a>
-    <a href="#">가보고 싶은 곳</a>
-    <a href="#">좋아하는 음식</a>
-    <a href="#">좋아하는 것</a>
+    <a href="#🗺태어난 곳🗺">🗺태어난 곳🗺</a>
+    <a href="#🧳가보고 싶은 곳🧳">🧳가보고 싶은 곳🧳</a>
+    <a href="#🍲좋아하는 음식🍗">🍲좋아하는 음식🍗</a>
+    <a href="#💓좋아하는 것💓">💓좋아하는 것💓</a>
 </div>
 <div class="back">
     <div style="text-align: center;">
-        <h2 style="background-color: rgb(219, 219, 219);">태어난 곳</h2><br>
+        <h2 id="🗺태어난 곳🗺"; style="background-color: rgb(219, 219, 219);">🗺태어난 곳🗺</h2><br>
         <a href="https://ko.wikipedia.org/wiki/%EA%B5%AC%EB%AF%B8%EC%8B%9C" target="blank">
             <img src="../HTML/img/구미.png" alt="누르면 페이지 이동" style="width: 60%; height: 300px;">
             <p style="font-size: 13px;">('<i>구미</i>'에 대해 더 알고싶다면, 위 이미지를 눌러주세요.)</p>
         </a><br>
         <h4>태어난 곳은 "<i style="font-size: larger;">경상북도 구미</i>" 입니다.</h4><br>
+        <p>2000년 5월 8일에 태어나, 현재 나이는 만 24세 입니다.<br><br>
+            (태어난 곳은 구미이지만, 구미에서 실제로 살았던 기간은 6개월이며 
+            그 이후에는 쭉 수원에 거주하고 있습니다.😁) </p>
     </div>
 </div>
 <div class="back">
     <div style="text-align: center;">
-        <h2 style="background-color: rgb(219, 219, 219);">가보고 싶은 곳</h2><br>
+        <h2 id="🧳가보고 싶은 곳🧳"; style="background-color: rgb(219, 219, 219);">🧳가보고 싶은 곳🧳</h2><br>
         <a href="https://namu.wiki/w/%ED%95%80%EB%9E%80%EB%93%9C" target="blank">
             <img src="../HTML/img/핀란드.jfif" alt="누르면 페이지 이동" 
             style="width: 60%; height: 300px; outline-style:ridge;">
@@ -72,15 +81,121 @@
             <p style="text-align: left; font-size: 18px;">핀란드에서 가장 보고 싶은 것은 바로 <b style="color: green;">'오로라'</b>입니다.</p>
             <p style="font-size: 14px; text-align: left; ">
             오로라란, 태양에서 방출(放出)되는 플라즈마 입자(전자 또는 양성자)가 
-            지구 대기권 상층부의 자기장과 마찰하여 빛을 내는 광전(光電) 현상이다.<br>
+            지구 대기권 상층부의 자기장과 마찰하여 빛을 내는 광전(光電) 현상이다.
             이들 입자의 유래는 주로 태양에서 방출된 것이 대부분인데, 
             태양풍을 따라 지구 근처에 왔다가 지구 자기장에 이끌려 대기로 진입하는 것이다. 
-            자극(磁極)에 가까운 북반구와 남반구의 고위도 지방, 
+            자극(磁極)에 가까운 북반구와 남반구의 고위도 지방,
             즉 극지방에 가까울수록 관측이 쉽기 때문에 극광(極光)이라고도 한다. 
-            <br>즉, 북극에서는 북극광, 남극에서는 남극광으로 불린다. 
+            즉, 북극에서는 북극광, 남극에서는 남극광으로 불린다. 
             또 지구 이외에 목성, 토성, 화성 등에도 오로라 현상이 있는 것으로 알려졌다.</p>
-            <p style="font-size: 11px; text-align: left; color: blue;">(->왼쪽 사진은 오로라 현상을 보여주고 있습니다.)</p>
+            <p style="font-size: 11px; text-align: left; color: blue;">(->왼쪽 사진은 오로라 현상을 보여주고 있습니다.)<br><br></p>
         </div>
+    </div>
+</div>
+<div class="back">
+    <div style="text-align: center;">
+        <h2 id="🍲좋아하는 음식🍗"; style="background-color: rgb(219, 219, 219);">🍲좋아하는 음식🍗</h2><br>
+        <h3>가장 좋아하는 음식은"<ins style="font-size: larger;"><i>떡볶이 & 치킨</i></ins>" 입니다.</h3><br>
+        <div style="text-align: center;">
+            <h4><ins style="font-size: 20px;">떡볶이</ins>는?<span style="font-size: larger;">🤷</span></h4>
+            <img src="../HTML/img/떡볶이.jpg" alt="/" style="width: 50%; height: 300px; margin:auto;">
+            <p style="margin: 3% 3%;">떡과 부재료를 양념에 볶거나 끓여서 먹는 한국 요리로, 
+                어린 학창 시절부터 익숙한 맛인 데다 매운 맛에 든든한 느낌이 든다는 점, 꽤 많은 분량으로 인해 함께 먹기 좋은 음식이라는 점, 
+                만들어 먹기도, 사 먹기도 용이한 간식이라는 정체성을 유지하므로 20대 여성층에게 떡볶이는 특별한 의미가 있다고 할 만큼, 
+                저또한 스트레스 받을 때 가장 먼저 찾게 되는 최애의 음식입니다.😄</p>
+            <br>
+            <div style="background-color: #ddd; border: 1px solid black; border-radius: 10%; text-align: left;">
+                <a href="https://www.10000recipe.com/recipe/6858080" target="_blank">
+                    <img src="../HTML/img/백종원선생님.png" alt="누르면 페이지 이동" 
+                    style="float: left; width: 250px; height: 90px; border-style: outset; margin: 0.5% 3%;">
+                </a>
+                <p style="font-size: larger; color: brown;">떡볶이를 맛있게 만들기 위해서는?</p>
+                -> 왼쪽의 백종원 선생님을 눌러보세요~!<br><br>
+            </div><br><br>
+            <div style="text-align: center;">
+                <h4><ins style="font-size: 20px;">치킨</ins>은?<span style="font-size: larger;">🤷</span></h4>
+                <img src="C:\Frontend\HTML\img\치킨.png" alt="/" style="width: 50%; height: 300px; margin:auto;">
+                <p style="margin: 3% 3%;">
+                    닭고기를 기름에 튀겨 만든 음식으로, 한국에서는 피자, 햄버거 등 다른 패스트푸드보다 압도적으로 인기가 많으며, 
+                    라면처럼 야식으로도 널리 사랑받고 있는 음식입니다.<br>
+                    밤에 TV나 영화를 보며 먹는 치맥 또는 치콜은 흔한 대한민국 가정집의 휴식 풍경이 되었을 정도로 치킨은 이미 전세계적으로 유명한 음식입니다.<br>
+                    이와 비슷하게 저도 스트레스를 받은 날이나 축구경기가 있는 날이면, 꼭 치킨을 시켜서 맥주와 함께 마시는 것을 좋아합니다.😄</p>
+                <br>
+                <div style="text-align: center;">
+                    그렇다면, <p style="font-size: larger; color: brown;">가장 좋아하는 떡볶이와 치킨의 조합은?</p>
+                    <img src="C:\Frontend\HTML\img\엽기떡볶이.jpeg" alt="" 
+                    style="position: inherit; width: 250px; height: 200px; border-radius: 20%; margin: 0.5% 0%; z-index: -2;">
+                    <img src="C:\Frontend\HTML\img\+.png" alt="" 
+                    style="position: inherit; width: 50px; height: 50px; border-radius: 20%; margin-bottom: 60px; z-index: -1;">
+                    <img src="C:\Frontend\HTML\img\뿌링클1.jpeg" alt="" 
+                    style="position: inherit; width: 250px; height: 200px; border-radius: 20%; margin: 0.5% 0%; z-index: 0;">
+                    <img src="C:\Frontend\HTML\img\화살표.png" alt=""  
+                        style="position: inherit; width: 50px; height: 50px; border-radius: 20%; margin-bottom: 60px; z-index: +1;">
+                    <img src="C:\Frontend\HTML\img\뿌링클.jpeg" alt="" 
+                    style="position: inherit; width: 300px; height: 200px; border-radius: 20%; margin: 0.5% 5%; z-index: 0;"><br>
+                    떡볶이 중에서는 <b>'엽기떡볶이'</b>를 가장 좋아하며, 치킨 중에서는 <b>'뿌링클'</b>을 가장 좋아합니다.<br>
+                    그렇기에 이 두가지 음식을 시켜서 맥주와 함께 먹는 것을 가장 좋아합니다.<br>
+                </div>
+    </div>
+</div>
+<div class="back">
+    <div style="text-align: center;">
+        <h2 id="💓좋아하는 것💓"; style="background-color: rgb(219, 219, 219);">💓좋아하는 것💓</h2><br>
+        </a><br>
+        <h4>좋아하는 것은 "<i style="font-size: larger;">운동</i>" 입니다.</h4><br>
+        <div style="text-align: left; margin: auto;">
+         <h3>좋아하는 운동 종목</h3>
+            <ul class="b">
+                <li style="font-size: larger;">풋살</li>
+                <div style="border: 2px solid black; border-radius: 10%;">
+                    <br><br>
+                    <div style="margin: 0.5% 1%; text-align: left;"> 
+                        <b>풋살</b>은 중학교 시절부터 여자축구부를 해오며 자연스럽게 생기게 된 취미입니다.<br>
+                        여자 풋살 동아리에서 주 1회씩 풋살을 하며 즐기고 있으며, 포지션은 주로 공격수를 맡고 있습니다.<br><br>
+                        <a href="https://lookforme83.com/%EC%B6%95%EA%B5%AC%EC%99%80-%ED%92%8B%EC%82%B4%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%A0%90/" target="_blank"><b>
+                            풋살과 축구의 차이점을 알아보고 싶다면?</b></a>
+                        <p style="font-size: smaller;">(자세한 설명은 위 굵은 글씨를 눌러보세요.)</p>
+                        </div>
+                <img src="C:\Frontend\HTML\img\풋살1.jpg" alt="" style="border-radius: 30%; width: 250px; 
+                            height: 200px; display: inline-block; margin: 0.3% 10% 0.3% 2%;">
+                
+                <img src="C:\Frontend\HTML\img\풋살2.jpg" alt="" style="border-radius: 30%; width: 250px; 
+                            height: 200px; display: inline-block; margin: 0.3% 0.5% 0.3% 50%;">
+                </div><br>
+                <li style="font-size: larger;">스쿼시</li>
+                    <div style="border: 2px solid black; border-radius: 10%;">
+                    <br><br>
+                        <div style="margin: 0.5% 1%; text-align: left;"> 
+                        <b>스쿼시</b>는 약 1년전쯤부터 시작하게 된 운동입니다.<br>
+                        스쿼시는 줄이 매어진 라켓을 사용한다는 점에서 테니스와도 매우 유사한데, 테니스가 딱딱한 공을 사용했던 것에 비해, 
+                        스쿼시에서는 잘 '찌그러지는(squashable)' 말랑말랑한 공을 사용한다는 점이 차이점입니다.<br>
+                        이러한 공을 벽에대고 치며 반복적으로 하는 유산소 운동 중 하나입니다.<br><br>
+                        <a href="https://namu.wiki/w/%EC%8A%A4%EC%BF%BC%EC%8B%9C" target="_blank"><b>스쿼시에 대해 더 알아보고 싶다면?</b></a>
+                        <p style="font-size: smaller;">(스쿼시에 대한 자세한 설명은 위 굵은 글씨를 눌러보세요.)</p>
+                        </div>
+                    <img src="C:\Frontend\HTML\img\스쿼시1.jpg" alt="" style="border-radius: 30%; width: 250px; 
+                            height: 200px; display: inline-block; margin: 0.3% 10% 0.3% 0.5%;">
+                    <img src="C:\Frontend\HTML\img\스쿼시2.jpg" alt="" style="border-radius: 30%; width: 250px; 
+                            height: 200px; display: inline-block; margin: 0.3% 0.5% 0.3% 50%;">
+                    </div><br>
+                <li style="font-size: larger;">농구</li>
+                <div style="border: 2px solid black; border-radius: 10%;">
+                    <br><br>
+                    <div style="margin: 0.5% 1%; text-align: left;"> 
+                    <b>농구</b>는 초등학생 시절부터 좋아하던 운동입니다.<br>
+                    방과후 수업으로 농구를 배우면서 관심을 가지게 되었고, 그 후로도 종종 농구장을 찾아가서 자유투 연습을 하곤 합니다.<br>
+                    오락실에서 가장 좋아하는 게임기구 중 하나도 농구게임기로, 친구들과 점수내기로도 즐겨합니다.<br><br>
+                    <a href="https://ko.wikipedia.org/wiki/%EB%86%8D%EA%B5%AC" target="_blank"><b>농구의 룰이 궁금하다면?</b></a>
+                    <p style="font-size: smaller;">(농구 규칙에 대한 자세한 설명은 위 굵은 글씨를 눌러보세요.)</p>
+                    </div>
+                <img src="C:\Frontend\HTML\img\농구.jpg" alt="" style="border-radius: 30%; width: 250px; 
+                        height: 200px; display: inline-block; margin: 0.3% 10% 0.3% 0.5%;">
+                <img src="C:\Frontend\HTML\img\농구2.jpeg" alt="" style="border-radius: 30%; width: 250px; 
+                        height: 200px; display: inline-block; margin: 0.3% 0.5% 0.3% 50%;">
+                </div>
+            </ul>
+        </div>
+        
     </div>
 </div>
     
