@@ -342,55 +342,60 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
         </div>
 
-        <!-- Modal body -->
-        <div class="modal-body">
-          <span>제목</span>
-          <span class="mx-2">
-            <div class="form-check d-inline">
-            <input type="checkbox" id="check" name="check" value="val" >
-            <label class="form-check-label" for="check">중요</label>
+        <form action="/schedule" method="get">
+          <!-- Modal body -->
+          <div class="modal-body my-1">
+            <div class="mt-3 d-inline me-3">
+              <label for="title" class="form-label">일정명</label>
+              <span class="me-2">
+                <div class="form-check d-inline ms-3">
+                <input type="checkbox" id="check" name="check" value="val" >
+                <label class="form-check-label text-danger" for="check">&nbsp;중요</label>
+                </div>
+              </span>
+              <input type="text" class="form-control" name="title" id="title" placeholder="일정명을 입력하세요.">
+            </div> 
+            <!-- <select class="form-select my-1">
+              <option value="kr">한식</option>  
+              <option value="en" selected>중식</option>
+              <option value="fr">양식</option>
+              <option value="es">일식</option>
+            </select> -->
+            <table>
+              <tr>
+                <td class="col-10">
+                  시작일<br><input type="date" class="form-control" value="2024-07-11">
+                </td>
+                <td class="col-2">
+                  시작시간<br><input type="time" class="form-control" value="12:00">
+                </td>
+              </tr>
+              <tr>
+                <td class="col-10">
+                  종료일<input type="date" class="form-control" value="2024-07-11">
+                </td>
+                <td class="col-2">
+                  종료시간<input type="time" class="form-control" value="13:00">
+                </td>
+              </tr>
+            </table>
+            <div class="my-1">
+              <label for="place" class="form-label">장소</label>
+              <input type="text" class="form-control" name="place" id="place" placeholder="장소를 입력하세요.">
             </div>
-          </span>
-          <select class="form-select my-2">
-            <option value="kr">한식</option>  <!--value에 있는 값이 서버로 전달되어지는 값-->
-            <option value="en" selected>중식</option>
-            <option value="fr">양식</option>
-            <option value="es">일식</option>
-          </select>
-          <table>
-            <tr>
-              <td class="col-10">
-                시작일<br><input type="date" class="form-control" value="2024-07-11">
-              </td>
-              <td class="col-2">
-                시작시간<br><input type="time" class="form-control" value="12:00">
-              </td>
-            </tr>
-            <tr>
-              <td class="col-10">
-                종료일<input type="date" class="form-control" value="2024-07-11">
-              </td>
-              <td class="col-2">
-                종료시간<input type="time" class="form-control" value="13:00">
-              </td>
-            </tr>
-          </table>
-          <div class="my-2">
-            <label for="place" class="form-label">장소</label>
-            <input type="text" class="form-control" name="place" id="place" placeholder="장소를 입력하세요.">
+            <div class="my-1">
+              <label for="memo" class="form-label">메모</label>
+              <input type="text" class="form-control" name="memo" id="memo" placeholder="메모를 입력하세요." required>
+            </div>
           </div>
-          <div class="my-2">
-            <label for="memo" class="form-label">메모</label>
-            <input type="text" class="form-control" name="memo" id="memo" placeholder="메모를 입력하세요." required>
+        
+          <!-- Modal footer -->
+          <div class="modal-footer mb-3">
+            <button type="submit" class="btn btn-primary me-2 btn-sm" data-bs-dismiss="modal">제출</button>
+            <button type="reset" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">종료</button>
           </div>
-        </div>
 
-        <!-- Modal footer -->
-        <div class="modal-footer mb-3">
-          <button type="submit" class="btn btn-primary me-2 btn-sm" data-bs-dismiss="modal">제출</button>
-          <button type="reset" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">종료</button>
-        </div>
-
+        </form>
       </div>
     </div>
   </div>

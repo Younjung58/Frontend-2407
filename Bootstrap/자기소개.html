@@ -14,34 +14,34 @@
 </head>
 <body>
 
-  <div class="container-fluid p-4 bg-light text-black text-center fixed-top"> 
+  <div class="container-fluid p-3 text-black text-center fixed-top" style="background-color: blanchedalmond;"> 
     <h1>"About Me"</h1><br>
   </div> 
   <div class="container-fluid">
-    <nav class="navbar navbar-expand-sm bg-secondary navbar-dark fixed-top" style="margin-top: 110px;">
+    <nav class="navbar navbar-expand-sm bg-secondary navbar-dark fixed-top" style="margin-top: 90px;">
       <div class="container-fluid">
         <ul class="navbar-nav">
           <a class="navbar-brand" href="https://github.com/Younjung58" target="_blank">
-            <img src="img/logo.png" alt="Logo" style="height: 30px;">
+            <img src="img/YJ_logo.jpg" alt="Logo" style="height: 30px; width: 60px;">
           </a>
-          <li class="nav-item mx-3">
-            <a class="nav-link" href="#"> <i class="fa-solid fa-location-dot"></i> 태어난 곳</a>
+          <li class="nav-item mx-2">
+            <a class="nav-link" href="#a"><i class="fa-solid fa-location-dot"></i> 태어난 곳</a>
           </li>
-          <li class="nav-item dropdown ms-3">
+          <li class="nav-item dropdown mx-2">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
               <i class="fa-solid fa-suitcase"></i> 가봤던 곳 / 가보고 싶은 곳</a>
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">가봤던 곳</a></li>
+              <li><a class="dropdown-item" href="#b">가봤던 곳</a></li>
               <li><hr class="dropdown-divider"></hr></li>
-              <li><a class="dropdown-item" href="#">가보고 싶은 곳</a></li>
+              <li><a class="dropdown-item" href="#c">가보고 싶은 곳</a></li>
             </ul>  
           </li>
-          <li class="nav-item mx-3">
-            <a class="nav-link" href="#"> <i class="fa-solid fa-bowl-food"></i> 좋아하는 음식</a>
+          <li class="nav-item mx-2">
+            <a class="nav-link" href="#좋아하는 음식"><i class="fa-solid fa-bowl-food"></i> 좋아하는 음식</a>
           </li>
-          <li class="nav-item mx-3">
-            <a class="nav-link" href="#"> <i class="fa-solid fa-heart"></i> 좋아하는 것</a>
+          <li class="nav-item mx-2">
+            <a class="nav-link" href="#좋아하는 것"><i class="fa-solid fa-heart"></i> 좋아하는 것</a>
           </li>
         </ul>
       </div>
@@ -64,7 +64,7 @@
           <a href="https://github.com/Younjung58" target="_blank">My Github</a><br>
           <i class="fa-brands fa-square-instagram"></i>
           <a href="Younjung58">Younjung58</a><br>
-          <i class="fa-solid fa-location-dot"></i> 수원시 팔달구
+          <i class="fa-solid fa-location-dot"></i> 경기도 화성시
           <a href="#"><span class="badge bg-secondary">날씨</span></a><br>
           <button type="button" class="btn btn-outline-primary btn-sm mt-2">Edit Profile</button>      
         </div>
@@ -72,9 +72,61 @@
 
       <!-- Main 영역: 페이지마다 이 부분만 채워줌 -->
       <div class="col-9" style="background-color: rgb(252, 252, 182);">
-        <h3 class="text-center mt-2"><strong>"About Me"</strong></h3>
+        <h2 id="a" class="text-center my-4"><strong>"About Me"</strong></h2>
+        <p class="text-center my-3">안녕하세요. 제 이름은 <strong>박연정</strong>입니다.</p>
         <hr>
-        <p>메인 영역</p>
+        <div class="card mx-2 my-5">
+          <h5 class="my-3 mx-3 mt-3"><i class="fa-solid fa-location-dot"></i><strong>&nbsp;태어난 곳</strong></h5>
+          <div class="my-3 mx-3">
+            <div class="pagination justify-content-between mb-3">
+              <div class="mx-3">
+                <img src="img/구미.PNG" alt="/" style="width: 200px; height: 250px;">
+                <img src="img/나.jpg" alt="" style="width: 150px; height: 250px;">
+              </div>
+              <div class="mx-3 mt-5"><i class="fa-regular fa-hand-point-right mt-5" style="font-size: 50px;"></i></div>
+              <div class="mx-3"><img src="img/수원.png" alt="/" style="width: 250px; height: 250px;"></div>
+            </div>
+            <div style="text-align: left;" class="mt-3 mx-3">
+              <h6>제가 태어난 곳은 <strong>경상북도 구미</strong>입니다.</h6>
+              <p>2000년 5월 8일에 태어나, 현재 나이는 만 24세 입니다.<br><br>
+                (태어난 곳은 구미이지만, 실제로 살았던 기간은 6개월 정도이며
+                그 이후로는 직장으로 인하여 잠깐 서울 거주 한 것을 제외하고는 쭉 수원에 거주하고 있습니다.😁) </p>
+            </div>
+          </div>
+        </div>
+        <div class="card mx-2 my-2">
+          <h5 class="my-3 mx-3"><i class="fa-solid fa-suitcase"></i><strong>&nbsp;가봤던 곳 / 가보고 싶은 곳</strong></h5>
+          <div class="my-3 mx-3">
+            <h6 id="b" class="mx-3"><i class="fa-solid fa-suitcase"></i><strong>&nbsp;가봤던 곳</strong></h6>
+            <br>
+            <h6 id="c" class="mx-3"><i class="fa-solid fa-suitcase"></i><strong>&nbsp;가보고 싶은 곳</strong></h6>
+            <div class="pagination justify-content-between mx-3 my-3">
+              <img src="img/핀란드1.jpg" alt="/" style="width: 250px; height: 250px;">
+              <img src="img/핀란드3.jpg" alt="/" style="width: 250px; height: 250px;">
+              <img src="img/핀란드2.jfif" alt="/" style="width: 250px; height: 250px;">
+            </div>
+            <div style="text-align: left;" class="my-3 mx-3">
+              <p>제가 가장 가보고 싶은 곳은 <strong>'핀란드'</strong> 입니다.<br><br> 
+                핀란드에서 유명한 것에는 '오로라'와 '산타마을'이 있습니다.<br>
+                저의 오랜 버킷리스트 중 하나가 오로라를 직접 관찰해 보는 것이고, 
+                개인적으로 산타와 크리스마스 분위기를 좋아하기에 
+                핀란드가 이 두가지를 모두 충족할 수 있는 가장 적합한 곳이라고 생각합니다.</p>
+            </div>
+            <div>
+              <p class="mx-3 text-primary" style="font-size: 18px;">
+                <i class="fa-regular fa-circle-question"></i><strong>&nbsp;오로라(aurora)?</strong></p>
+                <p class="mx-3">오로라(영어: aurora)는 태양에서 방출(放出)되는 플라즈마 입자(전자 또는 양성자)가 지구 대기권 상층부의 자기장과 마찰하여 빛을 내는 광전(光電) 현상이다. 
+                  이들 입자의 유래는 주로 태양에서 방출된 것이 대부분인데, 태양풍을 따라 지구 근처에 왔다가 지구 자기장에 이끌려 대기로 진입하는 것이다. 
+                  자극(磁極)에 가까운 북반구와 남반구의 고위도 지방, 즉 극지방에 가까울수록 관측이 쉽기 때문에 극광(極光)이라고도 한다.
+                  즉, 북극에서는 북극광, 남극에서는 남극광으로 불린다. 또 지구 이외에 목성, 토성, 화성 등에도 오로라 현상이 있는 것으로 알려졌다.</p>
+                <br>
+                <img src="img/오로라.gif" alt=""><br>
+                <a href="https://ko.wikipedia.org/wiki/%EC%98%A4%EB%A1%9C%EB%9D%BC" target="_blank">
+                  <i class="fa-brands fa-skyatlas mx-3" style="font-size: 20px;"></i></a>
+                  (->오로라에 대해 더 자세히 알고싶다면 왼쪽 아이콘을 누르세요.)
+            </div>
+          </div>
+        </div>
       </div>
 
 
