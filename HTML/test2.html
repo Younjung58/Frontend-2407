@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>일정 추가</title>
+    <style>
+      label, input, select {padding: 5px;}
+  </style>
+</head>
+<body style="margin: 40px;">
+    <form action="#" method="get">
+        <label for="title">일정명</label><br>
+        <input type="text" name="title" id="title" placeholder="일정명을 입력하세요."><br>
+        <label for="place">장소</label><br>
+        <input type="text" name="place" id="place" placeholder="장소를 입력하세요."><br>
+        <label for="memo">메모</label><br>
+        <input type="text" name="memo" id="memo" placeholder="메모를 입력하세요."><br>
+        <table>
+          <tr>
+            <td class="col-6">
+              <label for="start">시작일</label><br>
+              <input type="date" name="start" id="start" placeholder="시작일"><br>
+            </td>
+            <td class="col-6">
+              <label for="finish">종료일</label><br>
+              <input type="date" name="finish" id="finish" placeholder="종료일"><br>
+            </td>
+          </tr>
+          <tr>
+            <td class="col-6">
+              <label for="stime">시작시간</label><br>
+              <input type="time" name="stime" id="stime" placeholder="시작시간"><br>
+            </td>
+            <td class="col-6">
+              <label for="ftime">종료시간</label><br>
+              <input type="time" name="ftime" id="ftime" placeholder="종료시간"><br>
+            </td>
+          </tr>
+        </table>
+        
+        <input type="checkbox" id="importance" name="importance" value="/" checked>
+        <label for="importance">&nbsp;중요도</label><br>
+        
+        <div style="margin-left: 150px;">
+          <input type="submit" value="확인" style="margin-right: 20px;">
+          <input type="reset" value="취소">
+        </div>
+    </form>
+</body>
+</html>
