@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나이계산</title>
+    <style>
+        input, button{padding: 5px;}
+    </style>
+    <script>
+        function isAge(){
+            let date = new Date();
+            let tYear = date.getFullYear();
+            let tMonth = date.getMonth() + 1;
+            let tDay = date.getDate();
+            let birth = new Date(document.getElementById('age').value);
+            let a = birth.getFullYear();
+            let b = birth.getMonth()+1;
+            let c = birth.getDate();  
+            let age = tYear - a;
+            if (a==tYear)
+                return age;
+            if((b>tMonth) || (b==tMonth && c>tDay))
+                    age--;    
+            return age;
+        }
+        function checkAge(){
+            let birth = new Date(document.getElementById('age').value);
+            let result = isAge();
+            document.getElementById('result').innerHTML = '당신의 나이는'+'<strong>' + result + '</strong>'+'살 입니다.';
+        }
+    </script>
+</head>
+<body style="margin: 40px;">
+    <h3>나이계산</h3>
+    <hr>
+    <input type="date" id="age" placeholder="생년월일을 입력하세요.">
+    <button onclick="checkAge()">확인</button>
+    <hr>
+    <div id="result"></div>
+</body>
+</html>

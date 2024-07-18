@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>과제 종합</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<style>
+  input, button{padding: 5px;}
+</style>
+
+
+<body>
+
+<div class="container-fluid p-5 bg-primary text-white text-center"> 
+  <h1>그것이 알고싶다.</h1>
+</div>
+  
+<div class="container p-5 my-5 border">
+  <h3>나이계산</h3>
+  <hr>
+  <input type="date" id="age" placeholder="생년월일을 입력하세요.">
+  <button onclick="checkAge()">확인</button>
+  <hr>
+  <div id="result1"></div>
+  <script>
+    function isAge(){
+        let date = new Date();
+        let tYear = date.getFullYear();
+        let tMonth = date.getMonth() + 1;
+        let tDay = date.getDate();
+        let birth = new Date(document.getElementById('age').value);
+        let a = birth.getFullYear();
+        let b = birth.getMonth()+1;
+        let c = birth.getDate();  
+        let age = tYear - a;
+        if (a==tYear)
+            return age;
+        if((b>tMonth) || (b==tMonth && c>tDay))
+                age--;    
+        return age;
+    }
+    function checkAge(){
+        let birth = new Date(document.getElementById('age').value);
+        let result1 = isAge();
+        document.getElementById('result1').innerHTML = '당신의 나이는'+'<strong>' + result1 + '</strong>'+'살 입니다.';
+    }
+  </script>
+</div>
+
+<div class="container p-5 my-5 border">
+  <h3>사분면</h3>
+  <hr>
+    <input type="text" id="Q" placeholder="x, y값을 입력하세요.">
+    <button onclick="checkQ()">확인</button>
+    <hr>
+    <div id="result2"></div>
+    <script>
+      function isQ([x,y]){
+          let Q = '';
+              if(x>0 && y>0)
+                  return Q = '1사분면';
+                  else if(x>0 && y<0)
+                  return Q = '4사분면';
+                  else if(x<0 && y>0)
+                  return Q = '2사분면';
+                  else if(x<0 && y<0)
+                  return Q = '3사분면';
+                  else
+                  return Q = '좌표축';
+      }
+      function checkQ(){
+          let P = document.getElementById('Q').value;
+          let [x,y] = P.split(',');
+          let result2 = isQ([x,y]);
+          document.getElementById('result2').innerHTML = '<strong>' + result2 + '</strong>'+'입니다.';
+      }
+    </script>
+</div>
+
+
+
+<div class="container p-5 my-5 border">
+  <h3>주사위 상금</h3>
+  <hr>
+  <input type="text" style="width: 350px;" id="dice" placeholder="( , , )형태로 주사위 값 3개를 입력하세요.">
+  <button onclick="checkMoney()">확인</button>
+  <hr>
+  <div id="result3"></div>
+  <script>
+    function isMoney([a,b,c]){
+        let m = '';
+        let p = Math.max(a,b,c);        
+  
+        if(a==b && b==c)                 
+            return m = 10000+a*1000;
+        else if(a==b && b!=c)          
+            return m = 1000+a*100;
+        else if(a==c && c!=b)          
+            return m = 1000+a*100;
+        else if(b==c && c!=a)
+            return m = 1000+b*100;
+        else 
+            return m = p*100;
+    };
+    function checkMoney(){
+        let P = document.getElementById('dice').value;
+        let [a,b,c] = P.split(',');
+        let result3 = isMoney([a,b,c]);
+        document.getElementById('result3').innerHTML ='상금은'+'<strong>' + result3 + '</strong>'+'원 입니다.';
+    }
+  </script>
+</div>
+
+</body>
+</html>
