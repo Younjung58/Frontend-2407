@@ -26,6 +26,9 @@ cars.reverse();
 console.log(cars);
 
 // sort()* - 정렬('파괴적 메소드')
+cars.sort();        //문자열을 기준으로, 오름차순 정렬이 기본
+console.log(cars);
+
 let numbers = [34, 25, 89, 7, 45, 55, 19];
 // 오름차순(Ascending order)
 // numbers.sort((a,b) => a-b);
@@ -33,3 +36,11 @@ numbers.sort(function(a,b){
     return a-b;
 });
 console.log(numbers);
+
+// 내림차순(Descending order)
+numbers.sort((a, b) => b - a);
+console.log(numbers);
+
+// slice()  -> 비파괴적 메소드임
+console.log(fruits.slice(1, 3));    // fruits.slice(1)과 같음 -> [ 'banana', 'cherry' ]
+console.log(fruits);
