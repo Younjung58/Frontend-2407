@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>타이머</title>
+</head>
+<script>
+    window.onload = () => {
+            let time = 0;
+            let isStart = false;
+
+            
+            const h1 = document.querySelector('h1');
+            const startButton = document.querySelector('#start');
+            const stopButton = document.querySelector('#stop');
+            const resetButton = document.querySelector('#reset');
+            
+            
+
+            const listener = (event) =>{
+                let interval = setInterval(updateimer, 1000);
+                time++;
+                const minutes = Math.floor(time / 60);
+                const seconds = time % 60;
+                document.getElementById('timer').innerHTML = `${minutes < 10 ? '0' : ''}${minutes}:${seconds<10?'0':''}${seconds}`;
+                    };
+
+            startButton.addEventListener(`click`, ()=>{
+                if (isStart == false){
+                    h1.addEventListener('click', listener);
+                    isStart = true;
+                }
+            })
+
+            stopButton.addEventListener('click', ()=>{
+                if(isStart == true){
+                    h1.removeEventListener('click',listener);
+                    isStart = false;
+                }
+            })
+
+            resetButton.addEventListener('click',()=>{
+                document.getElementById('timer').innerHTML = "00:00.0";
+            })
+
+        }
+</script>
+<body>
+    <h1 id="timer">00:00.0</h1>
+    <button id="start" onclick="startButton()">시작</button>
+    <button id="stop" onclick="stopButton()">정지</button>
+    <button id="reset" onclick="resetButton()">리셋</button>
+</body>
+</html>
