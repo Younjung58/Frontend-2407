@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key code</title>
+    <script>
+        window.onload = () => {
+            const h1 = document.querySelector('h1');
+            const print = (event) => {          //parameter가 1개만 있으면 괄호 생략가능함 (event) = event
+                let output = '';
+                output += `alt: ${event.altKey}<br>`;        //event가 altKey가 눌러졌는지를 boolean형태로 도출함
+                output += `ctrl: ${event.ctrlKey}<br>`;
+                output += `shift: ${event.shiftKey}<br>`;
+                output += `code: ${typeof(event.code) !== 'undefined' ? event.code : event.Keycode}<br>`;
+                h1.innerHTML = output;
+            }
+
+            document.addEventListener('keydown', print);
+            document.addEventListener('keyup', print);
+        }
+    </script>
+</head>
+<body style="margin: 40px;">
+    <h1></h1>
+</body>
+</html>
