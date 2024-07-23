@@ -22,13 +22,13 @@
             const [left, up, right, down] = [37, 38, 39, 40];
             document.body.addEventListener('keydown', event=>{
                 switch(event.keyCode){
-                case left:
+                case left:  //case 0x48(h)
                     x -= 1; break;
-                case up:
+                case up:    //case 0x4b(k)
                     y -= 1; break;
-                case right:
+                case right: //case 0x4c(l)
                     x += 1; break;
-                case down:
+                case down:  //case 0x4a(j)
                     y += 1; break;
                 }
                 print();
