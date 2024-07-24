@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screen 객체</title>
+    <script>
+        window.onload = () => {
+            let attr = `width: ${screen.width}<br>`;        //동작하고 있는 전체의 width
+            attr += `height: ${screen.height}<br>`;
+            attr += `availWidth: ${screen.availWidth}<br>`;     // 그 width 중에 내가 사용할 수 있는 width
+            attr += `availHeight: ${screen.availHeight}<br>`;
+            attr += `colorDepth: ${screen.colorDepth}<br>`;
+            attr += `pixelDepth: ${screen.pixelDepth}<br>`;
+            document.querySelector('h3').innerHTML = attr;
+        }
+    </script>
+</head>
+<body style="margin: 40px;">
+    <h3></h3>
+</body>
+</html>
