@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 선택자</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(() => {
+            $('body').css('backgroundColor', 'yellow');
+            $('h1').css('color', 'red');
+        });
+    </script>
+</head>
+<body>
+    <h1>Header 1</h1>
+    <h1>Header 2</h1>
+    <!-- <script>
+        document.querySelector('body').style.backgroundColor = 'yellow';  //body의 backgroundcolor를 노랑으로
+        document.querySelector('h1').style.color = 'red';       
+        //querySelectorAll로 사용하면 array의 형태가 되므로 반복문으로 써줘야함.   
+    </script> -->
+</body>
+</html>
