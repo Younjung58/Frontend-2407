@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예외 처리</title>      <!--java에서 input, output을 다루는 항목은 반드시 예외처리를 만들어놓게 되어있음 -->
+    <script>
+        console.log('프로그램이 시작되었습니다.');
+        try {
+            console.rog('괄호를 닫지 않는 실수를 저질렀습니다.');    
+        } catch (error) {
+            console.log('에러가 발생을 했습니다.');
+            console.log(error.name);        // TypeError
+            console.log(error.message);     // console.rog is not a function
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
