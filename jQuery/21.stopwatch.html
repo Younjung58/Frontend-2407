@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stopwatch</title>
+    <title>jQuery Stopwatch</title>
     <style>
         button { padding: 5px; margin: 5px; font-size: 1.5rem; }
     </style>
@@ -21,10 +21,6 @@
         $(document).ready(()=>{
             let count = 0;
             let si = null;      // start와 stop에서 모두 사용해야하는 변수이므로 위쪽에서 let으로 선언해줌
-            const display = document.getElementById('display');
-            const start = document.getElementById('start');
-            const stop = document.getElementById('stop');
-            const reset = document.getElementById('reset');
 
 
             $('#start').click(() => {
