@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Todo list</title>
+    <style>
+        input, button, div { padding: 5px; margin: 5px; }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(()=>{
+        
+
+                const item = $('<div></div>');
+                const input2 = $('<input type="checkbox">');
+                
+                const button2 = $('<button></button>')
+                $(item).attr('data-key', key);
+                $(item).append(input2).append('<span></span>').append(button2);
+                $(item).appendTo('#todo-list');
+                $(input2).change((e) =>{
+                    $(item).css('text-decoration',  e.target.checked ? 'line-through' : '');
+                });
+                // $('span').text('span.value.${trim()}'');
+                $(button2).text('제거하기');
+                $(button2).click(()=>{
+                    removeTodo(key);
+                });
+
+                $('#todo').text('');
+            
+
+            const removeTodo = key => {
+                const item = $(`[data-key="${key}"]`);
+                $('#todo-list').remove('item');
+            }
+
+        $('#add-button').click(()=>{
+            addTodo()
+            });
+        $('input').keyup(e=>{
+        if (e.code === 'Enter') {    // (e.keyCode == 13)
+            // console.log(input.value, input.value_length);
+            addTodo()
+        }
+    });
+    </script>
+</head>
+<body style="margin: 40px;">
+    <h1>할 일 목록</h1>
+    <input type="text" id="todo">
+    <button id="add-button">추가하기</button>
+    <div id="todo-list">
+    </div>
+</body>
+</html>
