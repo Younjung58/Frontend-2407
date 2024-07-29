@@ -7,18 +7,30 @@
     <script src="key.js"></script>
     <script>
         window.onload = () => {
-            let base_url ='https://business.juso.go.kr/addrlink/addrLinkApi.do';
+            let roadBaseUrl ='https://business.juso.go.kr/addrlink/addrLinkApi.do';
+            let kakaoBaseUrl = 'https://dapi.kakao.com/v2/local/search/address.json';
             let params1 = 'currentPage=1&countPerPage=5';
             let params2 = `keyword=${encodeURIComponent('수원시청')}`;         // 한글은 반드시 인코딩 해줘야함
             let params3 = `confmKey=${roadAddrKey}&resultType=json`;
-            let url = `${base_url}?${params1}&${params2}&${params3}`;
+            let roadUrl = `${roadBaseUrl}?${params1}&${params2}&${params3}`;
 
-            fetch(url)
+            fetch(roadUrl)
                 .then(response => response.json())
                 .then(result => {
                     // console.log(result);
                     let roadAddr = result.results.juso[0].roadAddr;       // object이므로 .하나 누르고 키값 써주기
                     document.getElementById('place').innerHTML = roadAddr;
+
+                    let kakaoUrl = `${kakaoBaseUrl}?query=${encodeURIComponent(roadAddr)}`;
+                    let header = { Authorization: `KakaoAK ${kakaoRestKey}` };
+                    fetch(url, {headers: header})       // object형태라는 것은 header의 자리에 여러가지 항목이 들어올 수 있다는 것을 의미함
+                    .then(response => response.json())
+                    .then(result => {
+                        console.log(result);
+                    })
+                    .catch(error => {
+                        console.log(error);
+                    });
                 });
 
             // document.querySelector('p').innerHTML = url;
