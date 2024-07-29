@@ -18,15 +18,19 @@
                 .then(response => response.json())
                 .then(result => {
                     // console.log(result);
-                    let roadAddr = result.results.juso[0].roadAddr;       // object이므로 .하나 누르고 키값 써주기
+                    let roadAddr = result.results.juso[0].roadAddr;       // object이므로 .하나 누르고 키값 써주기       
                     document.getElementById('place').innerHTML = roadAddr;
 
                     let kakaoUrl = `${kakaoBaseUrl}?query=${encodeURIComponent(roadAddr)}`;
                     let header = { Authorization: `KakaoAK ${kakaoRestKey}` };
-                    fetch(url, {headers: header})       // object형태라는 것은 header의 자리에 여러가지 항목이 들어올 수 있다는 것을 의미함
+                    fetch(kakaoUrl, {headers: header})       // object형태라는 것은 header의 자리에 여러가지 항목이 들어올 수 있다는 것을 의미함
                     .then(response => response.json())
                     .then(result => {
-                        console.log(result);
+                        // console.log(result);
+                        let lat = result.documents[0].y;
+                        let lon = result.documents[0].x;
+                        document.getElementById('lat').innerHTML = lat;
+                        document.getElementById('lon').innerHTML = lon;
                     })
                     .catch(error => {
                         console.log(error);
