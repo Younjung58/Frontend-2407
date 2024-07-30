@@ -8,6 +8,7 @@
     <style>
         input, button { padding: 5px; }
     </style>
+    <script src="key.js"></script>
     <script>
         window.onload = () => {
             const kakaoScript = document.createElement('script');
@@ -30,7 +31,7 @@
 
             document.getElementById('place').innerHTML = place;
             fetch(roadUrl)
-                .then(response => response.json())
+                .then(response => response.json())      // respose는 fetch의 결과값
                 .then(result => {
                 // console.log(result);
                     if(result.results.juso.length > 0){
