@@ -9,7 +9,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://kit.fontawesome.com/20d076eb83.js" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-  <script type="text/javascript" src="http://dapi.kakao.com/v2/maps/sdk.js?appkey=9c88ad0c73e5bae7249dbdd3fbcc48cc"></script>
+  <script src="key.js"></script>
   <style>
 * { font-family: 'Noto Sans KR', sans-serif; }
     .accordion { background-color: whitesmoke;
@@ -96,7 +96,7 @@
   <script>
       window.onload = () => {
             const kakaoScript = document.createElement('script');
-            kakaoScript.src = `http://dapi.kakao.com/v2/maps/sdk.js?appkey=9c88ad0c73e5bae7249dbdd3fbcc48cc&autoload=false`;
+            kakaoScript.src = `http://dapi.kakao.com/v2/maps/sdk.js?appkey=${kakaoJsKey}&autoload=false`;
             kakaoScript.onload = () => {
                 kakao.maps.load(() => { });
             };
@@ -107,7 +107,7 @@
         let kakaoBaseUrl = 'https://dapi.kakao.com/v2/local/search/address.json';
         let params1 = 'currentPage=1&countPerPage=5';
         let params2 = `keyword=${encodeURIComponent(place)}`;         // 한글은 반드시 인코딩 해줘야함
-        let params3 = `confmKey=U01TX0FVVEgyMDI0MDcyOTExMTYwMjExNDk2OTg=&resultType=json`;
+        let params3 = `confmKey=${roadAddrKey}&resultType=json`;
         let roadUrl = `${roadBaseUrl}?${params1}&${params2}&${params3}`;
 
         fetch(roadUrl)
@@ -118,7 +118,7 @@
                 document.getElementById('place').innerHTML = roadAddr;
 
                 let kakaoUrl = `${kakaoBaseUrl}?query=${encodeURIComponent(roadAddr)}`;
-                let header = { Authorization: `KakaoAK 396e29db88d4fbeb5c2e1d79a3ad92d4` };
+                let header = { Authorization: `KakaoAK ${kakaoRestKey}` };
                 fetch(kakaoUrl, {headers: header})       // object형태라는 것은 header의 자리에 여러가지 항목이 들어올 수 있다는 것을 의미함
                     .then(response => response.json())
                     .then(result => {
