@@ -25,7 +25,7 @@
 
 			let response = await fetch(weatherUrl);
 			let result = await response.json();
-			console.log(result);
+			// console.log(result);
 			const desc = result.weather[0].description;
 			const iconCode = result.weather[0].icon;
 			const iconUrl = `http://openweathermap.org/img/w/${iconCode}.png`;
