@@ -7,18 +7,17 @@
     <script src="key.js"></script>
     <script>
         window.onload = () => {
-        const kakaoScript = document.createElement('script');
-        kakaoScript.src = `http://dapi.kakao.com/v2/maps/sdk.js?appkey=${kakaoJsKey}&autoload=false`;
-        kakaoScript.onload = () => {
-            kakao.maps.load(() => {
-                initializeMap();
-            });
-        };
-        document.head.appendChild(kakaoScript);
+            const kakaoScript = document.createElement('script');
+            kakaoScript.src = `http://dapi.kakao.com/v2/maps/sdk.js?appkey=${kakaoJsKey}&autoload=false&libraries=services`;
+            kakaoScript.onload = () => {
+                kakao.maps.load(() => {
+                    initializeMap();
+                });
+            };
+            document.head.appendChild(kakaoScript);
         }
 
         function initializeMap(){
-
             let infowindow = new kakao.maps.InfoWindow({zIndex:1});
 
             let mapContainer = document.getElementById('map'), // 지도를 표시할 div 
@@ -37,9 +36,6 @@
                 ps.keywordSearch(keyword, placesSearchCB); 
             });
 
-            // 키워드로 장소를 검색합니다
-            // ps.keywordSearch('이태원 맛집', placesSearchCB); 
-
             // 키워드 검색 완료 시 호출되는 콜백함수 입니다
             function placesSearchCB(data, status, pagination) {
                 console.log('검색 결과:', data, status);
@@ -54,9 +50,9 @@
                     console.log('검색 결과 없음 또는 오류:', status);
                 }
             }
+
             // 지도에 마커를 표시하는 함수입니다
             function displayMarker(place) {
-                
                 // 마커를 생성하고 지도에 표시합니다
                 let marker = new kakao.maps.Marker({
                     map: map,
@@ -69,6 +65,23 @@
                     infowindow.setContent('<div style="padding:5px;font-size:12px;">' + place.place_name + '</div>');
                     infowindow.open(map, marker);
                 });
+
+                // Kakao REST API로 주소 변환
+                const coords = `${place.x},${place.y}`;
+                const url = `https://dapi.kakao.com/v2/local/geo/coord2address.json?x=${place.x}&y=${place.y}`;
+                const headers = { Authorization: `KakaoAK ${kakaoRestKey}` };
+
+                fetch(url, { headers })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.documents && data.documents.length > 0) {
+                            const address = data.documents[0].address.address_name;
+                            console.log('주소:', address);
+                        } else {
+                            console.log('주소를 찾을 수 없습니다.');
+                        }
+                    })
+                    .catch(error => console.error('에러 발생:', error));
             }
         }
     </script>
